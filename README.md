@@ -34,21 +34,21 @@ Go to setting and change the interpreter and chose your venv for terminal
 
 ### folow this setps:
 1 .Go to pycharm's setting
-![](2.jpg "optional-title")
+![](images/2.jpg "optional-title")
 
 2.Select project then python interpreter
 
-![](3.jpg "optional-title")
+![](images/3.jpg "optional-title")
 
 3.Select the interpreter address 
 
 yourenv > Scripts > python.exe
 
-![](4.jpg "optional-title")
+![](images/4.jpg "optional-title")
 
 4.Press ok button then apply this change 
 
-![](5.jpg "optional-title")
+![](images/5.jpg "optional-title")
 
 ## Lets run our project for first time 
 
