@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+
+{% block title %}Hello{% endblock %}
+
+{% block content %}
+<h3>hello {{name}}</h3>
+
+    {% if name == "admin" %}
+        <h1>kose nanat {{name|upper}}</h1>
+    {%endif%}
+
+    {# This is comment #}
+    <!-- This is comment too-->
+
+<ul>
+    <li>bemiram mannnnnn</li>
+    <li>jolom ye albom por az bachegimo tab</li>
+
+</ul>
+
+{% endblock %}

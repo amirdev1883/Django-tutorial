@@ -201,3 +201,98 @@ create html file to show to clients
 def mew(request):
     return render(request , "mew.html")
 ```
+## variable in template 
+
+you can show variable in html file in {{ variable }}
+like this .
+
+you can send information from views to template with
+context 
+```python
+def cat(request):
+    Catinfo = {"name": "my-cat", "sound": "mew-mew"}
+    return render(request, "cat.html", context=Catinfo)
+```
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cat</title>
+</head>
+<body>
+    <h1>{{name}}</h1>
+    <h1>{{sound}}</h1>
+</body>
+</html>
+```
+
+## Operators in template
+
+you can write python operator code like if else for and ...
+with {% %} that's called tags in Django
+
+```html
+    {%if name == 'my-cat' %}
+        <h1> hello little cat pus pus</h1>
+    {%endif%}
+```
+## Filter in template
+```html
+    <h1>{{name|upper}}</h1>
+    <h1>{{sound|title}}</h1>
+```
+## comment in template
+
+    {# This is a comment #}
+it should not be appear in website page
+
+## Models
+
+after create a app Django automatically generate a models.py
+in app directory 
+
+models is for Databases and it save some information about users 
+and ...
+
+create a class with camelcase name and enter fields that you need
+for database
+
+class should inherit models.model 
+
+``` python
+from django.db import models
+
+class Todo(models.Model):
+    title = models.CharField(max_length=100)
+    body = models.TextField()
+    deadline = models.DateTimeField()
+```
+[Field types Django](https://docs.djangoproject.com/en/4.2/ref/models/fields/#field-types)
+< -- all field types in Django documentation
+
+you have to convert this to sqllight whit this command
+
+`python manage.py makemigrations`
+
+this fields will come to migrations folder 
+and if you want to change something its ok
+change it and then enter this command again 
+
+
+`python manage.py migrate`for convert field to database
+
+
+## Add models to admin panel
+
+go to admin.py and write this code
+```python
+from .models import Todocat
+admin.site.register(Todocat)
+```
+go to admin panel and you have Todocat informations
+
+![](images/7.jpg "optional-title")
+
+you have your app name then Todocat
+
