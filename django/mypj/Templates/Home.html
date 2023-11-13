@@ -1,0 +1,17 @@
+{%extends 'base.html' %}
+
+{%block title%}Home{% endblock %}
+{% block content %}
+    <h1>this is Home page</h1>
+    {% if request.user.is_authenticated %}
+        <h3>{{request.user.username}}</h3>
+    {% else %}
+        <h3 class="bg-info">Log in kon dige</h3>
+    {% endif %}
+
+    {% for todo in Todos %}
+    <div class="card">
+        <a class="card-body" href="{% url 'detail' todo.id %}">{{todo.title}}</a>
+    </div>
+    {% endfor %}
+{%endblock%}

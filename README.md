@@ -4,13 +4,13 @@
 
 create a virtual environment for your project
 
-`python -m vnev myvenv`
+`python -m venv myvenv`
 
 now your venv(virtual environment ) is created 
 
 then you have to activate it
 
-`myvenv/Scripts/activate.bat`
+`myvenv\Scripts\activate.bat`
 
 `(myvenv) C:\Users\AmirAbbas\Desktop\test>`
 
