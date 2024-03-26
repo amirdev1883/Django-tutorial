@@ -633,7 +633,7 @@ or you can do this for fields
 {%block title%}Update Form{% endblock %}
 {% block content %}
     <form action="" method="post">
-        {% csrf token %}
+        {% csrf_token %}
         {{form.as_p}}
         <input type="submit" value="Create">
     </form>
